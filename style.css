@@ -3,6 +3,12 @@ body {
     margin: auto;
 }
 
+h2 {
+margin: 0;
+
+}
+
+
 .header {
     display: flex;
     align-items: center;
@@ -99,6 +105,7 @@ height: 1.5rem;
 .searchFiltersFilter {
     display: flex;
     align-items: center;
+    justify-content: flex-start;
     margin-right: 30px;
     border: 2px solid #d9d9d9;
     border-radius: 2rem;
@@ -108,14 +115,12 @@ height: 1.5rem;
 }
 
 .searchFiltersFilterWrapIcon {
-    background-color: #DEEBFF;
     color: #0065FC;
-    border-radius: 100%;
-    height: 45px;
-    width: 45px;
+    height: 40px;
+    width: 30px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
 
 }
 
@@ -131,32 +136,37 @@ height: 1.5rem;
 
 .searchResultWrapIcon {
     color: #0065FC;
-    height: 30px;
-    width: 30px;
+    height: 25px;
+    width: 25px;
     border: solid 1px #d9d9d9;
     border-radius: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 15px;
+    margin-right: 20px;
 }
 
 
-
+.hostingMarseille {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 70%;
+    background-color: #f2f2f2;
+    border-radius: 30px;
+    padding: 30px;
+}
 
 .hosting{
     display: flex;
-    flex-direction: column;
-    border-radius: 30px;
-    padding: 30px;
-    background-color: #f2f2f2
+    gap: 30px;
 }
 
 .hostingMain {
     display: flex;
     flex-wrap: wrap;
-    column-gap: 30px;
     row-gap: 30px;
+    justify-content: space-between;
 }
 
 .hostingMainCard {
@@ -164,16 +174,18 @@ height: 1.5rem;
     padding: 5px;
     border-radius: 20px;
     box-shadow: 0 0 16px #0000002e;
-
+    width: calc((100% - 60px) / 3);
+    box-sizing: border-box;
 }
 
 .h2 {
 margin-top: 0;
 margin-bottom: 30px;
+
 }
 
 .hostingMainCardImg {
-    width: 240px;
+    width: 100%;
     height: 120px;
     border-radius: 15px 15px 0 0;
     object-fit: cover;
@@ -193,12 +205,55 @@ margin-bottom: 30px;
 }
 
 .hostingMainViewMore {
-    padding-top: 30px;
-    font-weight: bold;
     color: inherit;
     text-decoration: none;
 }
 
 .hostingMainGreyStar {
     color: lightgray;
+}
+
+
+
+.hostingPopular {
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    background-color: #f2f2f2;
+    border-radius: 30px;
+    padding: 30px;
+}
+
+.hostingPopularTitle {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hostingPopularCard {
+    display: flex;
+    background-color: white;
+    padding: 5px;
+    border-radius: 20px;
+    box-shadow: 0 0 16px #0000002e;
+}
+
+.hostingPopularCardImg {
+height: 145px;
+width: 135px;
+border-radius: 15px 0px 0px 15px;
+}
+
+.hostingPopularCardTitle {
+    margin: 10px;
+}
+
+
+.hostingPopularCardText {
+    margin: 10px;
+}
+
+.hostingPopularCardIcon {
+    margin: 10px;
+    color: #0065FC;
 }
