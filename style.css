@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Raleway', sans-serif;
     margin: auto;
@@ -159,8 +163,6 @@ height: 1.5rem;
 
 
 
-
-
 .hostingMarseille {
     display: flex;
     flex-direction: column;
@@ -185,11 +187,12 @@ height: 1.5rem;
 
 .hostingMainCard {
     background-color: white;
-    padding: 5px;
     border-radius: 20px;
     box-shadow: 0 0 16px #0000002e;
     width: calc((100% - 60px) / 3);
     box-sizing: border-box;
+    overflow: hidden;
+    border: 5px solid white;
 }
 
 .h2 {
@@ -201,7 +204,6 @@ height: 1.5rem;
 .hostingMainCardImg {
     width: 100%;
     height: 120px;
-    border-radius: 15px 15px 0 0;
     object-fit: cover;
 }
 
@@ -231,7 +233,9 @@ height: 1.5rem;
 
 
 
-
+.logoPopular {
+    color: #0065FC;
+}
 
 .hostingPopular {
     gap: 30px;
@@ -342,4 +346,18 @@ height: 1.5rem;
 .footerColumnLink {
     display: block;
     margin: 15px 0;
+}
+
+
+
+
+
+@media screen and (max-width:768px) {
+    .hosting {
+        flex-direction: column-reverse;
+        }
+        .hostingPopular, .hostingMarseille {
+        width: 100%;
+
+        }
 }
