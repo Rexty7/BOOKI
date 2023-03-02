@@ -28,8 +28,8 @@ a {
 
 
 .headerImg {
-padding: 30px;
-height: 1.5rem;
+    margin-left: 30px;
+    height: 1.5rem;
 }
 
 
@@ -39,7 +39,7 @@ height: 1.5rem;
 }
 
 
-.headerNavLink {
+.headerNavLink:hover {
     border-top: 3px solid #0065FC;
     color: #0065FC;
 }
@@ -121,7 +121,7 @@ height: 1.5rem;
     margin-right: 30px;
     border: 2px solid #d9d9d9;
     border-radius: 2rem;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     cursor: pointer;
     font-weight: bold;
 }
@@ -129,16 +129,23 @@ height: 1.5rem;
 .searchFiltersFilterWrapIcon {
     color: #0065FC;
     height: 40px;
-    width: 30px;
+    width: 50px;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
+    font-size: large;
 
 }
 
 .searchFiltersFilterTitle {
-    margin: 0 15px;
+    margin-right: 20px;
 }
+
+.searchFiltersFilter:hover {
+    background-color: #deebff;
+}
+
+
 
 .searchResult {
     display: flex;
@@ -157,8 +164,6 @@ height: 1.5rem;
     justify-content: center;
     margin-right: 20px;
 }
-
-
 
 
 
@@ -218,17 +223,22 @@ height: 1.5rem;
 .hostingMainCardIcon {
     margin: 5px ;
     color: #0065FC;
+    font-size: small;
 }
 
-.hostingMainViewMore {
-    color: inherit;
-    text-decoration: none;
+.hostingMainMore {
+font-weight: bold;
+margin-top: 20px;
+
 }
 
 .hostingMainGreyStar {
     color: lightgray;
 }
 
+.hostingMainViewMore1 {
+    display: flex;
+}
 
 
 
@@ -255,15 +265,17 @@ height: 1.5rem;
 .hostingPopularCard {
     display: flex;
     background-color: white;
-    padding: 5px;
     border-radius: 20px;
+    border: solid white;
+    overflow: hidden;
     box-shadow: 0 0 16px #0000002e;
 }
 
 .hostingPopularCardImg {
     height: 145px;
     width: 135px;
-    border-radius: 15px 0px 0px 15px;
+    display: block;
+    object-fit: cover;
 }
 
 .hostingPopularCardTitle {
@@ -278,7 +290,15 @@ height: 1.5rem;
 .hostingPopularCardIcon {
     margin: 10px;
     color: #0065FC;
+    font-size: small;
 }
+.hostingPopularAlign {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
 
 
 
@@ -334,8 +354,8 @@ height: 1.5rem;
 
 .footerColumn {
     display: flex;
-    width: 1440px;
-    padding: 0 2rem;
+    width: 100%;
+    padding: 0 30px;
     box-sizing: border-box;
 }
  .footerColumn1 {
@@ -348,16 +368,145 @@ height: 1.5rem;
     margin: 15px 0;
 }
 
+i.searchFormSubmitinputIcon.fas.fa-search {
+    display: none;
+}
 
 
 
 
 @media screen and (max-width:768px) {
+    .main {
+        padding: 20px;
+    }
+
     .hosting {
         flex-direction: column-reverse;
+        margin: -20px;
         }
-        .hostingPopular, .hostingMarseille {
+    .hostingPopular, .hostingMarseille {
+        width: 100%;
+        }
+    
+    .hostingPopular {
+        border-radius: 0%;
+        gap: 10px;
+    }
+    .hostingPopularTitle {
+        margin-bottom: 20px;
+    }
+    .hostingPopularCardIcon {
+        font-size: small;
+        
+    }
+   
+
+    .hostingMain {
+        display:flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hostingMarseille {
+        width: 100%;
+        background-color: transparent;
+        gap: 20px;
+    }
+    .hostingMainCard {
+        width: 100%;
+    }
+
+
+    .footerColumn {
+        flex-direction: column;
+    }
+    .header {
+        flex-direction: column;
+    }
+    .headerImg {
+        margin-top: 20px;
+    }
+    .headerNav {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .headerNavLink {
+        border-top: none;
+        border-bottom: 3px solid #F2F2F2;
+        width: 50%;
+        text-align: center;
+    }
+
+    .headerNavLink:hover {
+        border-top: none;
+        border-bottom: solid;
+    }
+
+    .searchForm {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .searchFormInput {
+        width: 100%;
+    }
+  
+    .searchFormSubmitInputText {
+        display: none;
+    }
+
+    .searchFilters {
+        justify-content: space-between
+    }
+
+    .searchFiltersTitle {
+        width: 100%;
+    }
+    .searchFiltersFilter {
+        margin-right: 0px;
+        width: 48%;
+        height: 50px;
+    }
+
+    .searchFiltersFilterTitle {
+        margin-right: 0px;
+    }
+
+
+    .searchResultWrapIcon {
+        width: 40px;
+        height: 30px;
+    }
+
+    .activityMarseille {
+        width:100%;        
+
+    }
+
+    .activityCard{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .activityCardImg{
+        height: 130px;
         width: 100%;
 
-        }
+    }
+    .activityButton {
+        height: 50px;
+        width: 100%;
+    }
+
+    .footer {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .footerColumn1 {
+        width: 100%;
+    }
+
+    i.searchFormSubmitinputIcon.fas.fa-search {
+        display: inline;
+    }
+
 }
